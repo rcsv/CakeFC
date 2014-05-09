@@ -57,6 +57,7 @@ class User extends AppModel {
 	public $validate = array(
 		// User.username VARCHAR(20) NOT NULL UNIQUE
 		'username' => array(
+			
 			// username は作成時に必須となります。
 			'required' => array(
 				'rule' => 'notEmpty',
@@ -84,7 +85,56 @@ class User extends AppModel {
 				'rule' => array('maxLength', 20),
 				'message' => 'The username is too long.')),
 
-		
-		);
+
+		// User.email VARCHAR(50) NOT NULL UNIQUE
+		'email' => array(
+			
+			// email は作成時に必須のフィールドとなります。
+			'required' => array(
+				'rule' => 'notEmpty',
+				'required' => true, 'allowEmpty' => false,
+				'message' => 'The email address is required.',
+				'on' => 'create'),
+
+			// email はメールアドレスの形式として適切なものであるとします。
+			'is_valid_format' => array(
+				'rule' => 'email',
+				'required' => true, 'allowEmpty' => false,
+				'message' => 'Please enter a valid email address.'),
+
+			// email は既に登録されている場合、ダメです。
+			'is_unique' => array(
+				'rule' => array('isUnique','email'),
+				'message' => 'Email address you specified is already in use.')),
+
+
+		// User.password VARCHAR(128) NOT NULL
+		'password' => array(
+			
+			// password は必須です。
+			'required' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Please enter a password.'),
+
+			// password は短すぎる場合、弾きます。
+			'too_short' => array(
+				'rule' => array('minLength', 6),
+				'message' => array('The password must have at least 6 characters.'))),
+
+
+		// (User.)temppassword --- password との比較用フィールド
+		'temppassword' => array(
+			'match' => array(
+				'rule' => array('confirmPassword', 'temppassword', 'password'),
+				'message' => 'The passwords are not same. Please try again.')),
+
+		// (User.)eula --- End User License agreement のチェックボックス
+		'eula' => array(
+			'agree_eula' => array(
+				'rule' => array('comparison', 'equal to', 1),
+				'required' => true, 'allowEmpty' => false,
+				'message' => 'You must read and agree EULA before sign up.',
+				'on' => 'create')));
 	///@formatter:on
+	
 }
