@@ -136,24 +136,66 @@ class User extends AppModel {
 				'message' => 'You must read and agree EULA before sign up.',
 				'on' => 'create')));
 	///@formatter:on
-
+	
+	/**
+	 * alphaNumericDashUnderscore
+	 * http://book.cakephp.org/2.0/en/models/data-validation.html
+	 * 
+	 * @param array $check
+	 */
 	public function alphaNumericDashUnderscore($check) {
-		
+		$value = array_values($check);
+		$value = $value[0];
+		return preg_match('|^[0-9a-zA-Z_-]*$|', $value);	
 	}
 	
+	/**
+	 * confirmPassword
+	 * password と temppassword のような、二つの文字列を評価するメソッドです。
+	 * CakePHP の基本検証メソッド集にありそうだけど、探していない。
+	 * 
+	 * @param string $check 使いません。
+	 * @param string $compareTo 比較対象その１
+	 * @param string $compareOf 比較対象その２
+	 * @return boolean 同じなら true, otherwise returns false.
+	 */
 	public function confirmPassword($check, $compareTo, $compareOf) {
-		
+		$p = $this->data[$this->alias][$compareOf];
+		$c = $this->data[$this->alias][$compareTo];
+		if($p==$c) {
+			$this->data[$this->alias]['password'] = $p;
+			return true;
+		}
+		return false;
 	}
 	
+	/**
+	 * getActivationHash method
+	 * 
+	 * 本登録用の URL を作成するための、難解な文字列を、CakePHP が管理している
+	 * modified フィールドから MD5 を使って生成します。
+	 */
 	public function getActivationHash() {
-		
+		if(!isset($this->id)) return false;
+		return Security::hash($this->field('modified'), 'md5', true);
 	}
 	
+	/**
+	 * isOwnedBy method
+	 * 
+	 * 所有者が自分自身か否か調べるメソッドです。Controller::isAuthorized() から
+	 * 呼ばれる予定です。
+	 */
 	public function isOwnedBy($postId, $userId) {
 		return $postId === $userId ;
 	}
 	
 	public function beforeSave($options = array()) {
-		
+		// User.password を保存前にハッシュし、AuthComponent::login() ができるようにします。
+		if(isset($this->data[$this->alias]['password'])){
+			App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
+			$this->data[$this->alias]['password'] = (new SimplePasswordHasher)->hash($this->data[$this->alias]['password']);
+		}
+		parent::beforeSave($options);
 	}
 }
