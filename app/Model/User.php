@@ -136,5 +136,24 @@ class User extends AppModel {
 				'message' => 'You must read and agree EULA before sign up.',
 				'on' => 'create')));
 	///@formatter:on
+
+	public function alphaNumericDashUnderscore($check) {
+		
+	}
 	
+	public function confirmPassword($check, $compareTo, $compareOf) {
+		
+	}
+	
+	public function getActivationHash() {
+		
+	}
+	
+	public function isOwnedBy($postId, $userId) {
+		return $postId === $userId ;
+	}
+	
+	public function beforeSave($options = array()) {
+		
+	}
 }
