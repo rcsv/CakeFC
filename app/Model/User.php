@@ -54,6 +54,37 @@ class User extends AppModel {
 	// それぞれのデータ項目に対応する、健全性の検証を設定します。
 	// ------------------------------------
 	///@formatter:off
-	public $validate = array();
+	public $validate = array(
+		// User.username VARCHAR(20) NOT NULL UNIQUE
+		'username' => array(
+			// username は作成時に必須となります。
+			'required' => array(
+				'rule' => 'notEmpty',
+				'required' => true, 'allowEmpty' => false, // notEmpty に required, !allowEmpty をつける意味があるのだろうか？
+				'message' => 'Please enter a username.',
+				'on' => 'create'),
+
+			// username はアルファベット、数字で構成されている必要があります。
+			'alpha' => array(
+				'rule' => 'alphaNumericDashUnderscore',
+				'message' => 'The username must be consist of letters, numeric, hyphen and underscore.'),
+
+			// username は既に使用されていた場合 NG です。
+			'unique_username' => array(
+				'rule' => array('isUnique','username'),
+				'message' => 'This username is already in use.'),
+			
+			// username は最低でも 3 文字必要です。
+			'atleast_3' => array(
+				'rule' => array('minLength', 3),
+				'message' => 'The username must have at least 3 characters.'),
+
+			// username は最長でも 20 文字に収めてください。
+			'max_length' => array(
+				'rule' => array('maxLength', 20),
+				'message' => 'The username is too long.')),
+
+		
+		);
 	///@formatter:on
 }
