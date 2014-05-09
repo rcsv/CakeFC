@@ -47,7 +47,8 @@ class User extends AppModel {
 		'Activity' => array(
 			'className' => 'Activity',
 			'foreignKey' => 'user_id',
-			'dependent' => true));
+			'dependent' => true,
+			'order' => 'Activity.created DESC'));
 
 
 	// Validation rules 
