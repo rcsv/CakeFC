@@ -39,7 +39,21 @@ class User extends AppModel {
 			'dependent' => true));
 
 	/**
-	 * belongsTo association
+	 * hasMany association
 	 * @ver array
 	 */
+	public $hasMany = array(
+		// Every user has many activities.
+		'Activity' => array(
+			'className' => 'Activity',
+			'foreignKey' => 'user_id',
+			'dependent' => true));
+
+
+	// Validation rules 
+	// それぞれのデータ項目に対応する、健全性の検証を設定します。
+	// ------------------------------------
+	///@formatter:off
+	public $validate = array();
+	///@formatter:on
 }
