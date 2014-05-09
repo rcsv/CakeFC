@@ -1,6 +1,7 @@
 <?php
 /**
  * Revision Behavior 2.0.4
+ * http://alkemann.googlecode.com/svn/trunk/models/behaviors/revision.php
  * 
  * Revision is a solution for adding undo and other versioning functionality
  * to your database models. It is set up to be easy to apply to your project,
