@@ -1,0 +1,29 @@
+{
+	"name": "rcsv/CakeFC",
+	"description": "FullCalendar Implementation using CakePHP framework",
+	"type": "library",
+	"keywords": ["calendar"],
+	"homepage": "",
+	"license": "MIT",
+	"author": [
+		{
+			"name": "Rcsv",
+			"homepage": "https://github.com/rcsv/CakeFC"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/rcsv/CakeFC/issues",
+		"source": "https://github.com/rcsv/CakeFC"
+	},
+	"require": {
+		"php": ">=5.2.8",
+		"ext-mcrypt": "*"
+	},
+	"require-dev": {
+		"cakephp/cakephp": ">=2.4.9"
+	},
+	"bin": [
+		"lib/Cake/Console/cake"
+	]
+}
+
