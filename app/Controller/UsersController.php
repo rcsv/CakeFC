@@ -51,11 +51,55 @@ class UsersController extends AppController {
 	
 	public function activate($user_id = null, $in_hash = null ) {
 		$this->User->id = $user_id;
-		if($this->User->exists())
+		if($this->User->exists() && $in_hash === $this->User->getActivationHash()) {
+			$this->User->saveField('active',1); // default 0
+			$this->Session->setFlash('Your account has been activated.');
+			
+			// add profile record.
+			App::uses('Profile', 'Model');
+			$this->Profile = (new Profile)->set('user_id', $this->User->id);
+			$this->Profile->save();
+			
+			// TODO Activity->save();
+		} else {
+			$this->Session->setFlash('This URL has already expired.');
+		}
+		$this->render('register_finished');
 	}
 	
+	/**
+	 * login method
+	 */
 	public function login() {
-		$this->stub();
+		if(!empty($this->data)) {
+			if($this->Auth->login()) {
+				if($this->data['User']['rememberMe']) {
+					unset($this->request->data['User']['rememberMe']);
+					$this->Cookie->write('Auth', $this->request->data, true, '+2 weeks');
+				}
+				return $this->redirect($this->Auth->redirectUrl());
+			}
+			
+			// login failed.
+			$state = $this->User->field('active', array('username' => $this->data['User']['username']));
+			
+			$str = $state == 0 ? 'Login error, wrong id or passwoth, or both.' : 'Your account is not active yet';
+			$this->Session->setFlash($str, 'alert', array(
+				'plugin' => 'BoostCake',
+				'class' => 'alert-error'));
+		} else {
+			
+			// cookie login
+			if($this->Cookie->check('Auth')) {
+				$this->data = $this->Cookie->read('Auth');
+				if($this->Auth->login()) {
+					return $this->redirect($this->Auth->redirectUrl());
+				}
+				
+				// cookie login failed.
+				$this->Cookie->delete('Auth');
+			}
+		}
 	}
 	
 	public function logout() {
