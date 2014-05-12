@@ -15,12 +15,43 @@ class UsersController extends AppController {
 		$this->stub();
 	}
 	
+	/**
+	 * Register method
+	 * 
+	 * It displays a registration form. If unregistered users submitted
+	 * here, they will receive a confirmination mail sent by CakeEmail
+	 * including activation URL.
+	 */
 	public function register() {
-		$this->stub();
+		// POST
+		// -------------------
+		
+		if(!empty($this->data)) {
+			if($this->User->save($this->data)) {
+				$url = $this->_getActivationUrl($this->User->id);
+				$this->Session->setFlash('Pre-registration is done. Please check your mail immediately.'
+					// display screen right now.
+					. $url, 'alert', array(
+						'plugin' => 'BoostCake',
+						'class' => 'alert-success'));
+				$this->render('register_finished');
+				
+				return ;
+			} else {
+				$this->Session->setFlash(__('Input Error.'), 'alert', array(
+					'plugin' => 'BoostCake',
+					'class' => 'alert-warning'));
+			}
+		}
+		
+		// GET
+		// -------------------
+		//$this->layout = 'default';
 	}
 	
 	public function activate($user_id = null, $in_hash = null ) {
-		$this->stub();
+		$this->User->id = $user_id;
+		if($this->User->exists())
 	}
 	
 	public function login() {
