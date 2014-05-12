@@ -10,6 +10,9 @@
 	<?php echo $this->Html->meta('icon'); ?>
 
 	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
 </head>
 <body class="<?php echo $this->action ; ?>"><div class="container-liquid">
 	<?php
@@ -20,9 +23,9 @@
 
 </div>
 	<!-- javascript loading area -->
-	<?php echo $this->Html->script('jquery-2.1.0.min'); ?>
-	
-	<?php echo $this->Html->script('bootstrap.min'); ?>
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	
 	<?php echo $this->Html->script('modernizr'); ?>
 	
