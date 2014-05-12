@@ -17,6 +17,7 @@
 	},
 	"require": {
 		"php": ">=5.2.8",
+		"josegonzalez/cakephp-upload": "1.0.0",
 		"ext-mcrypt": "*"
 	},
 	"require-dev": {
