@@ -68,15 +68,12 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
-
-	public $test = array(
 	);
 
 	function __construct() {
 		$url = parse_url(getenv('CLEANDB_DATABASE_URL'));
 		$this->default = array(
+			'datasource' => 'Database/Mysql',
 			'host' => $url['host'],
 			'login' => $url['user'],
 			'password' => $url['pass'],
