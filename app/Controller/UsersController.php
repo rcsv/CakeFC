@@ -116,7 +116,22 @@ class UsersController extends AppController {
 	}
 	
 	public function quit($id =null) {
-		$this->stub();
+		$this->User->id = $id;
+		if(!$this->User->exists()) throw new NotFoundException(__('Invalid %s', __('User')));
+		
+		$this->request->onlyAllow('post', 'quit');
+		
+		if($this->User->saveField('active', 0)) {
+			$this->Session->setFlash('We meet you again.', 'alert', array(
+				'plugin' => 'BoostCake',
+				'class' => 'alert-success'));
+		} else {
+			$this->Session->setFlash('Target user could not be deleted. Please try again.', 'alert', array(
+				'plugin' => 'BoostCake',
+				'class' => 'alert-error'));
+		}
+		return $this->redirect(array('action' => 'register'));
+		
 	}
 	
 	public function reactivate() {
