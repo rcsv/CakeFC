@@ -7,6 +7,41 @@ App::uses('Profile', 'Model');
  */
 class UsersController extends AppController {
 	
+	public function dashboard() {
+		$this->stub();
+	}
+	
+	public function index() {
+		$this->stub();
+	}
+	
+	public function register() {
+		$this->stub();
+	}
+	
+	public function activate($user_id = null, $in_hash = null ) {
+		$this->stub();
+	}
+	
+	public function login() {
+		$this->stub();
+	}
+	
+	public function logout() {
+		$this->stub();
+	}
+	
+	public function edit($id = null) {
+		$this->stub();
+	}
+	
+	public function quit($id =null) {
+		$this->stub();
+	}
+	
+	public function reactivate() {
+		$this->stub();
+	}
 	
 	// components
 	public $components = array('Paginator');
@@ -28,6 +63,14 @@ class UsersController extends AppController {
 			. $id
 			. '/'
 			. $this->User->getActivationHash();
+	}
+	
+	/**
+	 * trivial function stub.
+	 */
+	private function stub() {
+		$this->layout = 'default';
+		$this->render('stub');
 	}
 	
 	// methods override
