@@ -3,7 +3,6 @@
 	"description": "FullCalendar Implementation using CakePHP framework",
 	"type": "library",
 	"keywords": ["calendar"],
-	"homepage": "",
 	"license": "MIT",
 	"author": [
 		{
