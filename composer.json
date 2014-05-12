@@ -18,6 +18,7 @@
 	"require": {
 		"php": ">=5.2.8",
 		"josegonzalez/cakephp-upload": "1.0.0",
+		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*"
 	},
 	"require-dev": {
