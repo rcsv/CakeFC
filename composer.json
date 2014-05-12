@@ -24,8 +24,10 @@
 	"require": {
 		"php": ">=5.2.8",
 		"josegonzalez/cakephp-upload": "1.0.0",
+		"twbs/bootstrap": ">=3.1.1",
 		"slywalker/boost_cake": "*",
-		"ext-mcrypt": "*"
+		"ext-mcrypt": "*",
+		"composer/installers": "*"
 	},
 	"require-dev": {
 		"cakephp/cakephp": ">=2.4.9",
