@@ -103,7 +103,12 @@ class UsersController extends AppController {
 	}
 	
 	public function logout() {
-		$this->stub();
+		$this->Cookie->delete('Auth');
+		$this->Session->setFlash('See you again.', 'alert', array(
+			'plugin' => 'BoostCake',
+			'class' => 'alert-success'));
+		$this->User->id = $this->Auth->user('id');
+		return $this->redirect($this->Auth->logout());
 	}
 	
 	public function edit($id = null) {
