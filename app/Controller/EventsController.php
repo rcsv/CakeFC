@@ -26,6 +26,35 @@ class EventsController extends AppController {
 	}
 	
 	public function add() {
+		if($this->request->is('post', 'ajax')) {
+			$this->request->data['Event']['user_id'] = $this->Auth->user('id');
+			$this->Event->parseTitle($this->request->data);
+			if($this->Event->save()) {
+				$event = $this->Event->find('first', array(
+					'conditions' => array(
+						'Event.id' => $this->Event->id)));
+
+				$this->set(compact('event'));
+				$this->layout = 'ajax';
+				$this->render('json');
+			}
+		}
+		
+		// send calendar list
+		if($this->request->is('get')) {
+			$calendars = $this->Event->Calendar->find('list');
+			$this->set(compact('calendars'));
+			$this->request->data = $this->Event->prepareAddForm($this->request->query);
+		}
+		
+		// display add form
+		if($this->request->is('ajax')) {
+			$this->layout = 'ajax';
+			$this->render('ajax_add');
+		}
+	}
+	
+	public function change($id = null, $start, $end, $allDay = 'false') {
 		
 	}
 
