@@ -11,11 +11,9 @@
 			"homepage": "https://github.com/rcsv/CakeFC"
 		}
 	],
-	"support": {
-		"issues": "https://github.com/rcsv/CakeFC/issues",
-		"source": "https://github.com/rcsv/CakeFC"
+	"config": {
+		"vendor-dir": "Vendor/"
 	},
-	
 	"extra": {
 		"installer-paths": {
 			"app/Plugin/DebugKit": ["cakephp/debug_kit"],
