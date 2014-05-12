@@ -54,6 +54,11 @@ class EventsController extends AppController {
 		}
 	}
 	
+	/**
+	 * change method
+	 * 
+	 * このメソッドをつつくのは AJAX 経由のみ。
+	 */
 	public function change($id = null, $start, $end, $allDay = 'false') {
 		$this->Event->id = $id;
 		if(!$this->Event->exists()) {
@@ -81,6 +86,27 @@ class EventsController extends AppController {
 		return false;
 	}
 
+	// TODO implement edit method
+	public function edit($id = null) {
+		$this->layout = false;
+		if(!$this->Event->exists($id)) throw new NotFoundException(__('Invalid %s', __('Event')));
+	}
+	
+	// TODO implement delete method
+	public function delete($id = null) {
+		$this->layout = false;
+		if(!$this->Event->exists($id)) throw new NotFoundException(__('Invalid %s', __('Event')));
+		
+		// AJAX で POST, DELETE するので、
+		// 戻りは適当にする予定。
+		// $this->request->onlyAllow('post', 'delete');
+		if($this->Event->delete()) {
+			return true;
+		}
+		return false;
+	}
+	
+	
 	// methods override
 	// ---------------------------
 
