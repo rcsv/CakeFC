@@ -22,7 +22,9 @@
 		"ext-mcrypt": "*"
 	},
 	"require-dev": {
-		"cakephp/cakephp": ">=2.4.9"
+		"cakephp/cakephp": ">=2.4.9",
+		"cakephp/debug_kit": "2.2.*",
+		"phpunit/phpunit": "3.7.*"
 	},
 	"bin": [
 		"lib/Cake/Console/cake"
