@@ -15,6 +15,15 @@
 		"issues": "https://github.com/rcsv/CakeFC/issues",
 		"source": "https://github.com/rcsv/CakeFC"
 	},
+	
+	"extra": {
+		"installer-paths": {
+			"app/Plugin/DebugKit": ["cakephp/debug_kit"],
+			"app/Plugin/Localized": ["cakephp/localized"],
+			"app/Plugin/BoostCake": ["slywalker/boost_cake"]
+		}
+	},
+	
 	"require": {
 		"php": ">=5.2.8",
 		"josegonzalez/cakephp-upload": "1.0.0",
@@ -24,6 +33,7 @@
 	"require-dev": {
 		"cakephp/cakephp": ">=2.4.9",
 		"cakephp/debug_kit": "2.2.*",
+		"cakephp/localized": "2.1.*",
 		"phpunit/phpunit": "3.7.*"
 	},
 	"bin": [
