@@ -15,15 +15,11 @@ body {
 	box-shadow: 2px 2px 1px rgba(10,10,10,.45);
 }
 
-.register .container-liquid h1,
-.register .container-liquid h1 small {
+#cakefclogo {
 	/* mostly title string */
 	color: white;
 	font-family: 'Overlock', cursive;
 	font-weight: 900;
-}
-
-.register .container-liquid h1 {
 	font-size: 460%;
 }
 
