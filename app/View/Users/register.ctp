@@ -4,7 +4,7 @@
 	echo $this->Html->css('cakefc-fullwidth',array('inline' => false));
 ?>
 <div class="row">
-	<div class="col-md-offset-9 col-md-4">
+	<div class="col-md-offset-8 col-md-4">
 	<div class="container">
 	<?php
 		// call register form
