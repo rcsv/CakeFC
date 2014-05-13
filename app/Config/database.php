@@ -75,7 +75,7 @@ class DATABASE_CONFIG {
 	);
 
 	function __construct() {
-		$url = parse_url(getenv('CLEANDB_DATABASE_URL'));
+		$url = parse_url(getenv('CLEARDB_DATABASE_URL'));
 		$this->default = array(
 			'host' => $url['host'],
 			'login' => $url['user'],
