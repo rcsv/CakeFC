@@ -4,3 +4,7 @@
 body {
 	background: url('/img/bg-osx.jpg') no-repeat;
 }
+
+.well {
+	opacity: .35;
+}
