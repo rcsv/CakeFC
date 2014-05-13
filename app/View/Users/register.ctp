@@ -8,7 +8,7 @@
 	<div class="container">
 	<?php
 		// call register form
-		echo $this->element('register');
+		// echo $this->element('register');
 
 	?>
 	</div>
