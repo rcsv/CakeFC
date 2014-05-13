@@ -8,17 +8,27 @@
 	echo $this->Form->create('User', array(
 		'inputDefaults' => array(
 			'div' => 'form-group',
-			'label' => array('class' => 'col col-md-3 control-label'),
-			'wrapInput' => 'col col-md-9',
+			'wrapInput' => false,
 			'class' => 'form-control'),
-		'class' => 'well form-horizontal'));
-	
-	
+		'class' => 'well'));
+
+	?>
+
+	<fieldset>
+		<legend><?php echo __('Sign Up'); ?></legend>
+
+
+<?
 		// username の入力エリア
-		echo $this->Form->input('username', array('placeholder' => 'Username'));
+		echo $this->Form->input('username', array(
+			'label' => 'Your Name',
+			'placeholder' => 'Username'));
 	
 		// email address の入力エリア
-		echo $this->Form->input('email', array('placeholder' => 'Email'));
+		echo $this->Form->input('email', array(
+			'label' => 'Email',
+			'placeholder' => 'Email',
+			'after' => '<span class="help-block">Your Email address here.</span>'));
 	
 		// password 入力エリア 1
 		echo $this->Form->input('password', array('placeholder' => 'Password'));
