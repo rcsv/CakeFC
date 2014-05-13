@@ -5,7 +5,7 @@
 ?>
 <div class="row">
 	<div class="col-md-8"><div class="container">
-		<h1><i class="glyphicon glyphicon-leaf"></i> c a k e f c</h1>
+		<h1><i class="glyphicon glyphicon-leaf"></i> c a k e f c <small>fullCalendar with CakePHP</small></h1>
 	</div></div>
 	<div class="col-md-4">
 	
