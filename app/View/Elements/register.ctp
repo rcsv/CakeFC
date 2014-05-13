@@ -43,19 +43,15 @@
 		// End User License Agreement のチェックボックス
 		echo $this->Form->input('eula', array(
 			'type' => 'checkbox',
-			'wrapInput' => 'col col-md-9 col-md-offset-3',
 			'label' => 'I agree with EULA.',
 			'class' => false));
 	
 		// Sign up のボタン
-	?><div class="form-group"><?php
 		echo $this->Form->submit('Sign up', array(
-			'div' => 'col col-md-9 col-md-offset-3',
+			'div' => 'form-group',
 			'class' => 'btn btn-default'));
 	
-	?></div>
-
-	</fieldset>	
+	?></fieldset>	
 	<?php
 	
 	// Form の終了
