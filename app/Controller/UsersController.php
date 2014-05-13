@@ -46,7 +46,7 @@ class UsersController extends AppController {
 		
 		// GET
 		// -------------------
-		//$this->layout = 'default';
+		$this->layout = 'fullwidth';
 	}
 	
 	public function activate($user_id = null, $in_hash = null ) {
