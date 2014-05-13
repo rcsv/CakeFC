@@ -1,10 +1,10 @@
-/* CakeFC Fullwidth css
- * $Id$
+/* 
+ * CakeFC Fullwidth css
  */
 body {
 	background: url('/img/bg-osx.jpg') no-repeat;
 }
 
 .well {
-	opacity: .85;
+	opacity: .95;
 }
