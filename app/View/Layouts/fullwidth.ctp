@@ -10,6 +10,7 @@
 	<?php echo $this->Html->meta('icon'); ?>
 
 	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Overlock:900">
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
