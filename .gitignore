@@ -2,13 +2,15 @@
 #################################################
 /app/tmp
 /lib/Cake/Console/Templates/skel/tmp/
-/plugins
-/vendors
+/Plugin
+/Vendor
 /build
 /dist
 /tags
 !cache
 composer.phar
+
+
 # OS generated files #
 ######################
 .DS_Store
