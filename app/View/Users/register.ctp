@@ -5,7 +5,7 @@
 ?>
 <div class="row">
 	<div class="col-md-8">
-		Bootstrap grid examples
+		<div class="container">cakefc</div>
 	</div>
 	<div class="col-md-4">
 	

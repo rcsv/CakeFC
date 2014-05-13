@@ -3,6 +3,7 @@
  */
 body {
 	background: url('/img/bg-osx.jpg') no-repeat;
+	padding-top: 60px;
 }
 
 .well {
