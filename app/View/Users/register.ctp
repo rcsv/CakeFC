@@ -39,7 +39,7 @@
 	
 		// Sign up のボタン
 	?><div class="form-group"><?php
-		echo $this->submit('Sign up', array(
+		echo $this->Form->submit('Sign up', array(
 			'div' => 'col col-md-9 col-md-offset-3',
 			'class' => 'btn btn-default'));
 	
