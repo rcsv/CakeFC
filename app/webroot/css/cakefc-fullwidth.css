@@ -15,10 +15,10 @@ body {
 	box-shadow: 2px 2px 1px rgba(10,10,10,.45);
 }
 
-.register .container-liquid h1 {
+.register .container-liquid h1,
+.register .container-liquid h1 small {
 	/* mostly title string */
 	color: white;
-	font-size: 240%;
 }
 
 
