@@ -7,7 +7,7 @@ body {
 }
 
 .container-liquid {
-	margin: 15px auto;
+	margin: auto 15px;
 }
 .well {
 	opacity: .89;
