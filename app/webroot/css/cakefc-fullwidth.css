@@ -19,6 +19,8 @@ body {
 .register .container-liquid h1 small {
 	/* mostly title string */
 	color: white;
+	font-family: 'Overlock', cursive;
+	font-weight: 900;
 }
 
 
