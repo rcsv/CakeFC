@@ -4,11 +4,14 @@
 	echo $this->Html->css('cakefc-fullwidth',array('inline' => false));
 ?>
 <div class="row">
-	<div class="col-md-offset-8 col-md-4">
-	<div class="container">
+	<div class="col-md-8">
+		Bootstrap grid examples
+	</div>
+	<div class="col-md-4">
+	
 	<?php
 		// call register form
-		// echo $this->element('register');
+		echo $this->element('register');
 
 	?>
 	</div>

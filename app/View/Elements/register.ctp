@@ -54,7 +54,8 @@
 			'class' => 'btn btn-default'));
 	
 	?></div>
-	
+
+	</fieldset>	
 	<?php
 	
 	// Form の終了
