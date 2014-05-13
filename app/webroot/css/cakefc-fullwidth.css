@@ -21,7 +21,9 @@ body {
 	color: white;
 	font-family: 'Overlock', cursive;
 	font-weight: 900;
-	font-size: 360%;
 }
 
+.register .container-liquid h1 {
+	font-size: 460%;
+}
 
