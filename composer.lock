@@ -3,8 +3,96 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c87309ce15274fe8f98ab7f9ded5c6c9",
+    "hash": "06c2241404cffc91ef9a1674a2e59e35",
     "packages": [
+        {
+            "name": "cakephp/cakephp",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp.git",
+                "reference": "780132f892da7d533d067ec3792636a30b48b3be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/780132f892da7d533d067ec3792636a30b48b3be",
+                "reference": "780132f892da7d533d067ec3792636a30b48b3be",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mcrypt": "*",
+                "php": ">=5.2.8"
+            },
+            "require-dev": {
+                "cakephp/debug_kit": "2.2.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "lib/Cake/Console/cake"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
+                }
+            ],
+            "description": "The CakePHP framework",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "framework"
+            ],
+            "time": "2014-05-13 02:17:12"
+        },
+        {
+            "name": "cakephp/localized",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/localized.git",
+                "reference": "3aecce1d17b7a085deb221e528af29836717684d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/localized/zipball/3aecce1d17b7a085deb221e528af29836717684d",
+                "reference": "3aecce1d17b7a085deb221e528af29836717684d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "php": ">=5.2.8"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                },
+                "installer-name": "Localized"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/localized/graphs/contributors"
+                }
+            ],
+            "description": "CakePHP Localized Plugin",
+            "homepage": "https://github.com/cakephp/localized",
+            "keywords": [
+                "cakephp",
+                "i18n",
+                "l10n",
+                "localized"
+            ],
+            "time": "2013-12-06 18:04:23"
+        },
         {
             "name": "composer/installers",
             "version": "v1.0.13",
@@ -88,6 +176,50 @@
                 "zikula"
             ],
             "time": "2014-04-09 16:12:43"
+        },
+        {
+            "name": "facebook/php-sdk-v4",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
+                "reference": "6ef64ad8116f33a750ab29cb89c6ab235d91dcfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/6ef64ad8116f33a750ab29cb89c6ab235d91dcfc",
+                "reference": "6ef64ad8116f33a750ab29cb89c6ab235d91dcfc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Facebook\\": "src/Facebook/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Facebook Platform"
+            ],
+            "authors": [
+                {
+                    "name": "Facebook",
+                    "homepage": "https://github.com/facebook/facebook-php-sdk-v4/contributors"
+                }
+            ],
+            "description": "Facebook SDK for PHP",
+            "homepage": "https://github.com/facebook/facebook-php-sdk-v4",
+            "keywords": [
+                "facebook",
+                "sdk"
+            ],
+            "time": "2014-05-07 22:02:06"
         },
         {
             "name": "josegonzalez/cakephp-upload",
@@ -298,49 +430,6 @@
     ],
     "packages-dev": [
         {
-            "name": "cakephp/cakephp",
-            "version": "2.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "780132f892da7d533d067ec3792636a30b48b3be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/780132f892da7d533d067ec3792636a30b48b3be",
-                "reference": "780132f892da7d533d067ec3792636a30b48b3be",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mcrypt": "*",
-                "php": ">=5.2.8"
-            },
-            "require-dev": {
-                "cakephp/debug_kit": "2.2.*",
-                "phpunit/phpunit": "3.7.*"
-            },
-            "bin": [
-                "lib/Cake/Console/cake"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
-                }
-            ],
-            "description": "The CakePHP framework",
-            "homepage": "http://cakephp.org",
-            "keywords": [
-                "framework"
-            ],
-            "time": "2014-05-13 02:17:12"
-        },
-        {
             "name": "cakephp/debug_kit",
             "version": "2.2.3",
             "source": {
@@ -388,51 +477,6 @@
                 "kit"
             ],
             "time": "2014-02-01 21:15:24"
-        },
-        {
-            "name": "cakephp/localized",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/localized.git",
-                "reference": "3aecce1d17b7a085deb221e528af29836717684d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/localized/zipball/3aecce1d17b7a085deb221e528af29836717684d",
-                "reference": "3aecce1d17b7a085deb221e528af29836717684d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "php": ">=5.2.8"
-            },
-            "type": "cakephp-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                },
-                "installer-name": "Localized"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/localized/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Localized Plugin",
-            "homepage": "https://github.com/cakephp/localized",
-            "keywords": [
-                "cakephp",
-                "i18n",
-                "l10n",
-                "localized"
-            ],
-            "time": "2013-12-06 18:04:23"
         },
         {
             "name": "phpunit/php-code-coverage",

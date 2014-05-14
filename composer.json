@@ -17,7 +17,8 @@
 		"installer-paths": {
 			"app/Plugin/DebugKit": ["cakephp/debug_kit"],
 			"app/Plugin/Localized": ["cakephp/localized"],
-			"app/Plugin/BoostCake": ["slywalker/boost_cake"]
+			"app/Plugin/BoostCake": ["slywalker/boost_cake"],
+			"app/Vendor/Facebook": ["facebook/php-sdk-v4"]
 		}
 	},
 	
@@ -25,12 +26,13 @@
 		"josegonzalez/cakephp-upload": "1.0.0",
 		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*",
-		"composer/installers": "*"
+		"composer/installers": "*",
+		"cakephp/cakephp": ">=2.4.7",
+		"cakephp/localized": "2.1.*",
+		"facebook/php-sdk-v4" : "4.0.*"
 	},
 	"require-dev": {
-		"cakephp/cakephp": ">=2.4.7",
 		"cakephp/debug_kit": "2.2.*",
-		"cakephp/localized": "2.1.*",
 		"phpunit/phpunit": "3.7.*"
 	},
 	"bin": [
