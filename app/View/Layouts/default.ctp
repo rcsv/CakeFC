@@ -29,14 +29,6 @@
 		echo $this->Session->flash('auth') ;
 		echo $this->Session->flash(); 
 		
-		if($user) {
-			echo 'Welcome ' . $user['username'];
-			echo $this->Html->link('Logout', array('controller' => 'user', 'action' => 'logout'));
-		} else {
-			echo $this->Html->link('Facebook Login', $fb_login_url) . ' | ';
-		}
-		
-		
 		?>
 	<?php echo $this->fetch('content'); ?>
 
