@@ -92,6 +92,10 @@ Configure::write('Dispatcher.filters', array(
 	'CacheDispatcher'
 ));
 
+// - - - CakeFC - Facebook
+Configure::write('Facebook.appId',  '768621159835123');
+Configure::write('Facebook.secret', '0a47170dc9455226b660f871d12a49f5');
+
 /**
  * Configures default file logging options
  */
