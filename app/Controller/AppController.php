@@ -35,7 +35,7 @@ class AppController extends Controller {
 					'plugin' => 'BoostCake',
 					'class '=> 'alert-error')),
 
-			// It is magic words to control grant. 
+			// It is magic words to control grant.
 			// AuthComponent call Controller::isAuthorized() method.
 			'authorize' => array('Controller'),
 
@@ -85,7 +85,7 @@ class AppController extends Controller {
 
 	/**
 	 * AppController::beforeFilter() decide realm of unauthorized user can access.
-	 * 
+	 *
 	 * @see Controller::beforeFilter()
 	 */
 	public function beforeFilter() {
@@ -94,22 +94,15 @@ class AppController extends Controller {
 		 * place nearby. TODO 2. Set login flag HERE. It often occured
 		 * redirect-loop here when wrong implementation.
 		 */
-		 App::import('Vendor', 'facebook', array('file' => 'facebook'.DS.'facebook.php'));
-		 $this->Facebook = new Facebook(array(
-		 	'appId' => '',
-		 	'secret' => ''));
-		 	
-		 
-		 if($this->Session->check('Auth.User.offset')) {
-		 	$this->Session->write('Auth.User.offset', $this->_getTimezoneOffset($this->Auth->user('timezone')));
-		 }
+		App::import('Vendor', 'Facebook', array('file' => 'facebook'.DS.'php-sdk-v4'.DS.'src'.DS.'Facebook'.DS.'facebook.php'));
+		FacebookSession::setDefaultApplication('Facebook.appId', 'Facebook.secret');
+
+		if($this->Session->check('Auth.User.offset')) {
+			$this->Session->write('Auth.User.offset', $this->_getTimezoneOffset($this->Auth->user('timezone')));
+		}
 	}
-	
+
 	public function beforeRender() {
-		$this->set('fb_login_url', $this->Facebook->getLoginUrl(array(
-			'redirect_uri' => Router::url(array(
-				'controller' => 'users', 
-				'action' => 'login'), true))));
 		if($this->Auth->loggedIn()) {
 		 	$this->set('user',$this->Auth->user());
 		 }
@@ -123,7 +116,7 @@ class AppController extends Controller {
 	}
 
 	/**
-	 * 
+	 *
 	 * @return integer
 	 */
 	private function _getTimezoneOffset($timezone_id = null) {
