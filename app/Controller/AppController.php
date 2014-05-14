@@ -94,11 +94,24 @@ class AppController extends Controller {
 		 * place nearby. TODO 2. Set login flag HERE. It often occured
 		 * redirect-loop here when wrong implementation.
 		 */
-		 if($this->Auth->loggedIn()) {
-		 	$this->set('my',$this->Auth->user());
-		 }
+		 App::import('Vendor', 'facebook', array('file' => 'facebook'.DS.'facebook.php'));
+		 $this->Facebook = new Facebook(array(
+		 	'appId' => '',
+		 	'secret' => ''));
+		 	
+		 
 		 if($this->Session->check('Auth.User.offset')) {
 		 	$this->Session->write('Auth.User.offset', $this->_getTimezoneOffset($this->Auth->user('timezone')));
+		 }
+	}
+	
+	public function beforeRender() {
+		$this->set('fb_login_url', $this->Facebook->getLoginUrl(array(
+			'redirect_uri' => Router::url(array(
+				'controller' => 'users', 
+				'action' => 'login'), true))));
+		if($this->Auth->loggedIn()) {
+		 	$this->set('user',$this->Auth->user());
 		 }
 	}
 
