@@ -69,24 +69,64 @@ class UsersController extends AppController {
 	
 	/**
 	 * login method
+	 * 
+	 * Handles login attempts from both facebook SDK and local
 	 */
 	public function login() {
-		if(!empty($this->data)) {
+		
+		// If it is a post request we can assume that is a local login request
+		if ($this->request->isPost()) {
 			if($this->Auth->login()) {
 				if($this->data['User']['rememberMe']) {
 					unset($this->request->data['User']['rememberMe']);
 					$this->Cookie->write('Auth', $this->request->data, true, '+2 weeks');
 				}
-				return $this->redirect($this->Auth->redirectUrl());
+				$this->redirect($this->Auth->redirectUrl());
+			} else {
+				// login failed.
+				$state = $this->User->field('active', array('username' => $this->data['User']['username']));
+			
+				$str = $state == 0 ? 'Login error, wrong id or passwoth, or both.' : 'Your account is not active yet';
+				$this->Session->setFlash($str, 'alert', array(
+					'plugin' => 'BoostCake',
+					'class' => 'alert-error'));
 			}
+		}
+		
+		// When facebook login is used, facebook always returns $_GET['code'].
+		else if ($this->request->query('code')) {
 			
-			// login failed.
-			$state = $this->User->field('active', array('username' => $this->data['User']['username']));
-			
-			$str = $state == 0 ? 'Login error, wrong id or passwoth, or both.' : 'Your account is not active yet';
-			$this->Session->setFlash($str, 'alert', array(
-				'plugin' => 'BoostCake',
-				'class' => 'alert-error'));
+			// user login successful
+			$fb_user = $this->Facebook->getUser();      # Returns facebook user_id
+			if ($fb_user) {
+				$fb_user = $this->Facebook->api('/me'); # Returns user information.
+				
+				// We will verify if a local user exists first
+				$local_user = $this->User->find('first', array(
+					'conditions' => array('username' => $fb_user['email'])));
+				
+				// If exists, we will log them in
+				if ($local_user) {
+					$this->Auth->login($local_user['User']);
+					$this->redirect($this->Auth->redirectUrl());
+				} else {
+					// Otherwise we will add a new user (Registration)
+					$data['User'] = array(
+						'username' => $fb_user['email'],
+						'email' => $fb_user['email'],
+						'active' => 1,
+						'password' => AuthComponent::password(uniqid(md5(mt_rand())))); /// <- ...
+					
+					// You should change this part to include data validation
+					$this->User->save($data, array('validate' => false));
+					
+					// After registration we will redirect them back here so they be logged in
+					$this->redirect(Router::url('/users/login?code=true', true));
+				}
+			} else {
+				// facebook login failed....
+				//
+			}
 		} else {
 			
 			// cookie login
