@@ -12,7 +12,7 @@
 			<?php
 
 			// include elements
-			echo $this->element('login.ctp');
+			echo $this->element('login');
 
 ?>
 		</div>
