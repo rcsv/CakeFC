@@ -11,19 +11,8 @@
 		<div class="col-md-2">
 			<?php
 
-			// form
-			echo $this->Form->create('User', array());
-			// inputs
-			echo $this->Form->input('username',array(
-				'placeholder' => 'Username'));
-
-			echo $this->Form->input('password', array(
-				'placeholder' => 'Password'));
-
-			echo $this->Form->input('rememberMe', array(
-				'type' => 'checkbox'));
-
-			echo $this->Form->end('Login');
+			// include elements
+			echo $this->element('login.ctp');
 
 ?>
 		</div>
