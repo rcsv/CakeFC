@@ -73,6 +73,8 @@ class UsersController extends AppController {
 	 * Handles login attempts from both facebook SDK and local
 	 */
 	public function login() {
+
+    // Required Login Via Local SYSTEM
 		if ($this->request->isPost()) {
 			if($this->Auth->login()) {
 				if($this->data['User']['rememberMe']) {
@@ -158,6 +160,10 @@ class UsersController extends AppController {
 				$this->Cookie->delete('Auth');
 			}
 		}
+
+    if($this->request->is('get')) {
+      $this->layout = 'fullwidth';
+    }
 	}
 
 	public function logout() {

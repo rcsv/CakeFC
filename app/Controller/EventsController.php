@@ -6,9 +6,9 @@ class EventsController extends AppController {
 	// action methods
 	/**
 	 * index method
-	 * 
-	 * インデックスでは、fullCalendar を二つ表示する。
-	 * GET メソッドでは HTML を戻し、ajax では json を戻す。
+	 *
+	 * インデックスでは、fullCalendar を二つ表示する。GET メソッドでは HTML を戻し、ajax
+	 * では json を戻す。
 	 */
 	public function index() {
 		if($this->request->is('ajax')) {
@@ -17,14 +17,14 @@ class EventsController extends AppController {
 			$this->render('jsonlist');
 		} else {
 			$this->layout = 'default';
-			
+
 			// send Calendars list
 			App::uses('Calendar', 'Model');
 			$calendars = $this->Calendar = (new Calendar)->getCalendarList($this->Auth->user('id'));
 			$this->set(compact('calendars'));
 		}
 	}
-	
+
 	public function add() {
 		if($this->request->is('post', 'ajax')) {
 			$this->request->data['Event']['user_id'] = $this->Auth->user('id');
@@ -39,24 +39,24 @@ class EventsController extends AppController {
 				$this->render('json');
 			}
 		}
-		
+
 		// send calendar list
 		if($this->request->is('get')) {
 			$calendars = $this->Event->Calendar->find('list');
 			$this->set(compact('calendars'));
 			$this->request->data = $this->Event->prepareAddForm($this->request->query);
 		}
-		
+
 		// display add form
 		if($this->request->is('ajax')) {
 			$this->layout = 'ajax';
 			$this->render('ajax_add');
 		}
 	}
-	
+
 	/**
 	 * change method
-	 * 
+	 *
 	 * このメソッドをつつくのは AJAX 経由のみ。
 	 */
 	public function change($id = null, $start, $end, $allDay = 'false') {
@@ -64,20 +64,20 @@ class EventsController extends AppController {
 		if(!$this->Event->exists()) {
 			throw new NotFoundException(__('Invalid %s', __('Event')));
 		}
-		
+
 		// Event.id = $id
 		$options = array(
 			'conditions' => array(
 				'Event.' . $this->Event->primaryKey => $id));
-		
+
 		$this->Event->unbindModel(array('belongsTo' => array('User')));
 		$event = $this->Event->find('first', $options);
-		
+
 		$event['Event']['start'] = date('Y-m-d H:i:s', $start);
 		$event['Event']['end'] = date('Y-m-d H:i:s', $end);
 		$event['Event']['allday'] = (strcmp($allDay, 'true') == 0) ? 1 : 0 ;
 		$event['Event']['modified'] = null;
-		
+
 		$this->autoLayout = false;
 		$this->autoRender = false;
 		if($this->Event->save($event)) {
@@ -91,12 +91,12 @@ class EventsController extends AppController {
 		$this->layout = false;
 		if(!$this->Event->exists($id)) throw new NotFoundException(__('Invalid %s', __('Event')));
 	}
-	
+
 	// TODO implement delete method
 	public function delete($id = null) {
 		$this->layout = false;
 		if(!$this->Event->exists($id)) throw new NotFoundException(__('Invalid %s', __('Event')));
-		
+
 		// AJAX で POST, DELETE するので、
 		// 戻りは適当にする予定。
 		// $this->request->onlyAllow('post', 'delete');
@@ -105,8 +105,8 @@ class EventsController extends AppController {
 		}
 		return false;
 	}
-	
-	
+
+
 	// methods override
 	// ---------------------------
 
@@ -118,7 +118,7 @@ class EventsController extends AppController {
 		if(in_array($this->action, array('index'))) {
 			return true;
 		}
-		
+
 		parent::isAuthorized($user);
 	}
 }
