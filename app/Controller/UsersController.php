@@ -1,11 +1,12 @@
 <?php
 App::uses('AppController', 'Controller');
-App::uses('Profile', 'Model');
 
 /**
  * Users Controller
  */
 class UsersController extends AppController {
+
+	public $uses = array('Profile');
 
 	public function dashboard() {
 		$this->stub();
@@ -56,8 +57,7 @@ class UsersController extends AppController {
 			$this->Session->setFlash('Your account has been activated.');
 
 			// add profile record.
-			App::uses('Profile', 'Model');
-			$this->Profile = (new Profile)->set('user_id', $this->User->id);
+			$this->Profile->set('user_id', $this->User->id);
 			$this->Profile->save();
 
 			// TODO Activity->save();
