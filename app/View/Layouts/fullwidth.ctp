@@ -36,7 +36,9 @@
 </div>
 <div id="footer">
 <div class="container">
-	<p class="muted credit">CakeFC configured <a href="http://github.com/rcsv">Rcsv</a>.</p>
+	<?php
+		echo $this->element('copyright');
+	?>
 </div></div>
 
 	<!-- javascript loading area -->
