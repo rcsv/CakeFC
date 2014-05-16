@@ -41,5 +41,5 @@
 
       echo $this->Form->end();
 ?>
-<p><a href="users/register">Register</a> if you don't have a account yet.</p>
+	<p><a href="<?php echo $this->webroot; ?>users/register">Sign up / Register</a> if you don't have a account yet.</p>
 </fieldset>

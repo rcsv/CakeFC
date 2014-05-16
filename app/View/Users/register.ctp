@@ -17,6 +17,6 @@
 	?>
 	</div>
 </div>
-<div class="footer">
+<div id="footer"><div class="container">
 	CakeFC <small>&copy;</small>
-</div>
+</div></div>
