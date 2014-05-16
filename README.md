@@ -7,9 +7,13 @@ CakePHP の fullCalendar 実装を目指す。
 
 ## TODO LIST
 - [ ] 機能を全部実装する
-  - [ ] Users Controller
+  - [x] Users Controller
   - [ ] Calendars Controller
   - [ ] Events Controller
   - [ ] Color Picker
   - [ ] fullCalendar
   - [ ] datetime picker
+- [ ] 体裁を整える
+  - [ ] User
+  - [ ] Calendar
+  - [ ] Event / fullCalendar
