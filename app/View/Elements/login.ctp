@@ -20,8 +20,9 @@
     <?php
 
       // username :: inputs
-      echo $this->Form->input('username',array(
-        'placeholder' => 'Username'));
+  	echo $this->Form->input('username',array(
+	  'label' => '',
+	'placeholder' => 'Username'));
 
       // password :: inputs
       echo $this->Form->input('password', array(
@@ -40,4 +41,5 @@
 
       echo $this->Form->end();
 ?>
+<p><a href="users/register">Register</a> if you don't have a account yet.</p>
 </fieldset>
