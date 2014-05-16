@@ -30,7 +30,10 @@
 	<?php
 		echo $this->Session->flash('auth') ;
 		echo $this->Session->flash(); 
-		?>
+	?>
+
+	<hr/>
+	
 	<?php echo $this->fetch('content'); ?>
 
 </div>
