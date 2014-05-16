@@ -5,3 +5,11 @@ CakeFC は jQuery のカレンダーアプリを実現するプラグイン
 CakePHP を使ってカレンダーアプリを実装する。
 CakePHP の fullCalendar 実装を目指す。
 
+## TODO LIST
+- [ ] 機能を全部実装する
+  - [ ] Users Controller
+  - [ ] Calendars Controller
+  - [ ] Events Controller
+  - [ ] Color Picker
+  - [ ] fullCalendar
+  - [ ] datetime picker
