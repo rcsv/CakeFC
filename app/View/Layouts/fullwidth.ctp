@@ -34,6 +34,11 @@
 	<?php echo $this->fetch('content'); ?>
 
 </div>
+<div id="footer">
+<div class="container">
+	<p class="muted credit">CakeFC configured <a href="http://github.com/rcsv">Rcsv</a>.</p>
+</div></div>
+
 	<!-- javascript loading area -->
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
 	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
