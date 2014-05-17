@@ -52,6 +52,7 @@ class UsersController extends AppController {
 
 	public function activate($user_id = null, $in_hash = null ) {
 		$this->User->id = $user_id;
+		
 		if($this->User->exists() && $in_hash === $this->User->getActivationHash()) {
 			$this->User->saveField('active',1); // default 0
 			$this->Session->setFlash('Your account has been activated.');
