@@ -14,4 +14,5 @@
 			'controller' => 'users',
 			'action' => 'resign',
 			$my['id']));
+	}
 
