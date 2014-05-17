@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
-	public $uses = array('Profile');
+	public $uses = array('User','Profile');
 
 	public function dashboard() {
 		$this->stub();
