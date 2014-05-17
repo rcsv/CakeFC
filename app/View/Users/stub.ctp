@@ -11,7 +11,7 @@
 	// ユーザーアカウントの凍結リンクの検証
 	if(isset($my)) {
 		echo $this->Form->postLink(__('Resign'), array(
-			'controller => 'users',
+			'controller' => 'users',
 			'action' => 'resign',
 			$my['id']));
 
