@@ -9,7 +9,7 @@
 	// $my = AuthComponent::user() となって入ってくる予定。
 	
 	// ユーザーアカウントの凍結リンクの検証
-	if(isset($my)) {
+	if(isset($user)) {
 		echo $this->Form->postLink(__('Resign'), array(
 			'controller' => 'users',
 			'action' => 'resign',
