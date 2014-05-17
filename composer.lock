@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "06c2241404cffc91ef9a1674a2e59e35",
+    "hash": "b6922a1203178cd8137420ec77cb82ed",
     "packages": [
         {
             "name": "cakephp/cakephp",
@@ -179,16 +179,16 @@
         },
         {
             "name": "facebook/php-sdk-v4",
-            "version": "4.0.2",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
-                "reference": "6ef64ad8116f33a750ab29cb89c6ab235d91dcfc"
+                "reference": "5754d4c740af29d269030a739b06e5834ff30c2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/6ef64ad8116f33a750ab29cb89c6ab235d91dcfc",
-                "reference": "6ef64ad8116f33a750ab29cb89c6ab235d91dcfc",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/5754d4c740af29d269030a739b06e5834ff30c2f",
+                "reference": "5754d4c740af29d269030a739b06e5834ff30c2f",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2014-05-07 22:02:06"
+            "time": "2014-05-15 22:43:17"
         },
         {
             "name": "josegonzalez/cakephp-upload",
