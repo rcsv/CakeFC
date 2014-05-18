@@ -27,12 +27,12 @@
 
 </head>
 <body class="<?php echo $this->action ; ?>"><div class="container-liquid">
+	<hr/>
 	<?php
 		echo $this->Session->flash('auth') ;
 		echo $this->Session->flash(); 
 	?>
 
-	<hr/>
 	
 	<?php echo $this->fetch('content'); ?>
 

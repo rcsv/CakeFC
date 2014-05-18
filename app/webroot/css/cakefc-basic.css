@@ -1,0 +1,133 @@
+/*
+ * CakeFC FullCalendar CSS
+ * =========================================
+ *
+ * - full width layout style
+ * - 2 column with one side fixed layout
+ * - [left]   mini fullCalendar's style
+ * - [right]  huge fullCalendar's style
+ */
+body {
+}
+
+.container-liquid {
+	margin: 0 15px -60px 15px;
+
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+.row .fixedleft-185 {
+	float: left;
+	width: 185px;
+	margin-right: -185px;
+	padding: 0 13px;
+}
+
+.row .fixedleft-185-remain {
+	float: right;
+	padding: 0 13px 0 185px;
+	width: 100%;
+}
+
+.my_width_setting_class {
+	max-width: 400px;
+	min-width: 380px;
+}
+
+/**
+ * FULLCALENDAR THEME
+ * ---------------------------------------------------------------------- */
+
+	/**
+	 * WEEKEND COLORING = LIGHT GRAY
+	 */
+	td.fc-sat, td.fc-sub {
+		background-color: #F5F5F5;
+	}
+
+	th.fc-day-header.fc-sat, th.fc-day-header.fc-sun,
+	th.fc-widget-header.fc-sat, th.fc-widget-header.fc-sun {
+		color: #C0C0C0;
+	}
+
+	/**
+	 * TODAY'S COLORING = LIGHT RED
+	 */
+	td.fc-today {
+		background-color: #FFF4F5;
+		color: #CB6C6A;
+		border-top: 5px solid #CB6C6A;
+	}
+
+	#mfc td.fc-today {
+		/** MINI CALENDAR SIDE TODAY */
+		border-top: 1px solid #CB6C6A;
+		background-color: #CB6C6A;
+		color: white;
+	}
+
+	td.fc-thisweek {
+		/** $('td.fc-today').siblings() **/
+		border-top: 5px solid #FED6D7;
+	}
+
+	#mfc div.fc-day-number {
+		float: none;
+		text-align: center;
+	}
+
+	/** REMOVE BORDER LINES from MONTH VIEW */
+	table.fc-agenda-days thead th.fc-widget-header {
+		border-top: 0; border-left: 0; border-right: 0;
+	}
+
+	.fc-border-separate th {
+		border-left: 0;
+	}
+
+	/** REMOVE BORDER LINES from agendaWeek and agendaDay VIEW */
+	table.fc-agenda-days td.fc-widget-content {
+		border-left: 0; border-right: 0;
+	}
+
+	table.fc-agenda-days .fc-agenda-axis {
+		border-right: 0;
+	}
+
+	th.fc-widget-header.fc-agenda-axis {
+		border-left: 0; border-right: 0;
+	}
+
+	div.fc-widget-header.fc--agenda-divider {
+		border: 1px solid #D4D4D4;
+	}
+
+	div.fc-widget-header.fc-agenda-divider div.fc-agenda-divider-inner {
+		background-color: #D4D4D4;
+	}
+
+	.fc-event-not-allday {
+		background-color: white;
+		color: black;
+	}
+		
+
+#mfc th.fc-day-header {
+	text-align: center;
+}
+
+#current-view-mini, #my-calendar-list {
+	font-family: Segoe UI, sans-serif;
+	font-size: 115%;
+	display: block;
+	margin-bottom: 8px;
+	padding: 0 0 2px 1px;
+}
+
+#current-view-mini, #my-calendar-list:hover {
+	background-color: #F5F5F5;
+}
+
+
