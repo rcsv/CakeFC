@@ -1,4 +1,5 @@
 <?php
+App::uses('AppModel', 'Model');
 
 /**
  * Calendar Model - The User can create calendars and set access privileges.
