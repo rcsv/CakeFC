@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Calendar Model - The User can create calendars and set access privileges. 
+ * Calendar Model - The User can create calendars and set access privileges.
  *
  */
 class Calendar extends AppModel {
@@ -12,10 +12,10 @@ class Calendar extends AppModel {
 
 		// Calendar.title validation
 		// ------------------------------
-		
+
 		// Calendar.title required varchar(30).
 		'title' => array(
-			'maxLength' = array(
+			'maxLength' => array(
 				'rule' => array('maxLength', 30),
 				'message' => 'Title must be shorter than 30.',
 				'required' => true, 'allowEmpty' => false)),
@@ -58,7 +58,7 @@ class Calendar extends AppModel {
 			'foreignKey' => 'calendar_id',
 			'dependent' => false));
 
-	
+
 	// Utility Function getCalendarList
 	public function getCalendarList($id = null) {
 		if(empty($id)) throw new NotFoundException();
