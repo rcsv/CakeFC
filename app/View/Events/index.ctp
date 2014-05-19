@@ -42,14 +42,15 @@
 	//    2 : 10
 ?>
 <div class="row">
-	<div class="fixedleft-185">
-	<?php
-		echo $this->element('fc/minifc');
-	?>
-	</div>
 	<div class="fixedleft-185-remain">
 	<?php
 		echo $this->element('fc/hugefc');
+	?>
+	</div>
+	<div class="fixedleft-185">
+	<?php
+		echo $this->element('fc/minifc');
+		echo $this->element('fc/dialog');
 	?>
 	</div>
 </div>
