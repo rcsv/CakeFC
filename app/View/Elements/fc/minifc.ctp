@@ -18,6 +18,6 @@
 	
 		// display calendar list
 		// -------------------------------
-		echo $this->element('fc/calendars');
+		echo $this->element('fc/calendarlist');
 	?>
 </div>
