@@ -29,6 +29,7 @@
 	
 	// double full calendar control javascript を読み込む
 	echo $this->Html->script('cakefc', array('inline' => false));
+	echo $this->Html->css('cakefc-basic', array('inline' => false));
 
 ?>
 <?php
