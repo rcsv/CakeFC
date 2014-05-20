@@ -12,8 +12,8 @@
 </div>
 <hr>
 <div id="minical">
-	<a data-toggle="collapse" data-parent="#minical" href="#minifc" id="current-view-mini"></a>
-	<div class="fc collapse in" id="minifc"></div>
+	<a data-toggle="collapse" data-parent="#minical" href="#mfc" id="current-view-mini"></a>
+	<div class="fc collapse in" id="mfc"></div>
 	<?php
 	
 		// display calendar list
