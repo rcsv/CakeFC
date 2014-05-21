@@ -31,11 +31,6 @@ body {
 	width: 100%;
 }
 
-.my_width_setting_class {
-	max-width: 400px;
-	min-width: 380px;
-}
-
 /**
  * FULLCALENDAR THEME
  * ---------------------------------------------------------------------- */
@@ -43,7 +38,7 @@ body {
 	/**
 	 * WEEKEND COLORING = LIGHT GRAY
 	 */
-	td.fc-sat, td.fc-sub {
+	td.fc-sat, td.fc-sun {
 		background-color: #F5F5F5;
 	}
 
@@ -78,7 +73,22 @@ body {
 		text-align: center;
 	}
 
+
 	/** REMOVE BORDER LINES from MONTH VIEW */
+	th.fc-day-header {
+		text-align: right;
+		padding-right: 2px;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+	}
+	
+	td.fc-day {
+		border-left: 0;
+		border-right: 0;
+	}
+	
+	
 	table.fc-agenda-days thead th.fc-widget-header {
 		border-top: 0; border-left: 0; border-right: 0;
 	}
@@ -112,22 +122,53 @@ body {
 		background-color: white;
 		color: black;
 	}
-		
+	
+	
+	/* MINI fullCalendar's style */
+	#mfc th.fc-day-header {
+		text-align: center;
+	}
 
-#mfc th.fc-day-header {
-	text-align: center;
-}
+	#current-view-mini, #my-calendar-list {
+		font-family: Segoe UI, sans-serif;
+		font-size: 115%;
+		display: block;
+		margin-bottom: 8px;
+		padding: 0 0 2px 1px;
+	}
 
-#current-view-mini, #my-calendar-list {
-	font-family: Segoe UI, sans-serif;
-	font-size: 115%;
-	display: block;
-	margin-bottom: 8px;
-	padding: 0 0 2px 1px;
-}
+	#current-view-mini, #my-calendar-list:hover {
+		background-color: #F5F5F5;
+	}
 
-#current-view-mini, #my-calendar-list:hover {
-	background-color: #F5F5F5;
-}
+	
+	/** jQuery.qtip 2 plugin style */
+	div#qtip-hfc-content.qtip-content {
+		padding: 0;
+	}
+	
+	div#qtip-hfc-content.qtip-content div.panel.panel-info {
+		margin-bottom: 0;
+	}
+	
+	.qtip .description {
+		font-size: 14px;
+	}
+	
+	#qtip-hfc .qtip-close.qtip-icon {
+		width: 30;
+		height: 30;
+		text-align: center;
+		padding: 6px 0 0 4px;
+		/* font-size: 24px; */
+		line-height: 1.42;
+		border-radius: 15px;
+		text-decoration: none;
+	}
+	
+	.my_width_setting_class {
+		max-width: 400px;
+		min-width: 380px;
+	}
 
-
+a
