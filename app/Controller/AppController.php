@@ -12,7 +12,7 @@ class AppController extends Controller {
 		// declare BoostCakes' Helpers. see the BoostCake plugin:
 		// https://github.com/slywalker/cakephp-plugin-boost_cake
 		'Html' => array('className' => 'BoostCake.BoostCakeHtml'),
-		'Form' => array('className' => 'BoostCake.BoostCakeForm'),
+		'Form' => array('className' => 'Picker.PickerForm'),
 		'Paginator' => array('className' => 'BoostCake.BoostCakePaginator')) ;
 	///@formatter:on
 
