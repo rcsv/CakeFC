@@ -1,3 +1,12 @@
 [submodule "app/Plugin/Picker"]
 	path = app/Plugin/Picker
 	url = https://github.com/rcsv/cakephp-pickers-collection.git
+[submodule "app/Plugin/BoostCake"]
+	path = app/Plugin/BoostCake
+	url = https://github.com/slywalker/cakephp-plugin-boost_cake.git
+[submodule "app/Plugin/Upload"]
+	path = app/Plugin/Upload
+	url = https://github.com/josegonzalez/cakephp-upload.git
+[submodule "app/Plugin/Localized"]
+	path = app/Plugin/Localized
+	url = https://github.com/cakephp/localized.git
