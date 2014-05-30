@@ -1,0 +1,3 @@
+[submodule "app/Plugin/Picker"]
+	path = app/Plugin/Picker
+	url = https://github.com/rcsv/cakephp-pickers-collection.git

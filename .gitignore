@@ -14,6 +14,7 @@ composer.phar
 # OS generated files #
 ######################
 .DS_Store
+.settings
 .buildpath
 .project
 .DS_Store?
