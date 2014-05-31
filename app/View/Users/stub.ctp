@@ -16,7 +16,14 @@
 			$my['id']));
 	}
 
-	// 
+	// app/Controller/AppController.php で、使用する FormHelper を、CakePHP 謹製の
+	// FormHelper から、BoostCake.BoostCakeFormHelper へ。
+	// 更に Picker.PickerFormHelper に使用するヘルパーを変更。上記の順序で継承しているため、
+	// 動作上に違いは無いのだが。それにしても、この BoostCake のようなちょうど良いプラグインの
+	// 名前無いかなー。
+	// PickerCollection だと長いような気がする。それでも Picker だと他のプラグインに埋もれて
+	// しまいそうな気もするし。
+	
 	$this->Form->create('User');
 	
 	$this->Form->input('username');
