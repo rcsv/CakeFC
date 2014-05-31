@@ -15,12 +15,13 @@
 	},
 	"extra": {
 		"installer-paths": {
-			"app/Vendor/Facebook": ["facebook/php-sdk-v4"]
+			"app/Vendor/Facebook": ["facebook/php-sdk-v4"],
+			"app/Plugin/BoostCake": ["slywalker/boost_cake"]
 		}
 	},
 	
 	"require": {
-		"slywaker/boost_cake": "*",
+		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*",
 		"composer/installers": "*",
 		"facebook/php-sdk-v4" : "4.0.*"
