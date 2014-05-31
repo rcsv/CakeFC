@@ -24,8 +24,11 @@
 	// PickerCollection だと長いような気がする。それでも Picker だと他のプラグインに埋もれて
 	// しまいそうな気もするし。
 	
-	$this->Form->create('User');
+	echo $this->Form->create('User');
 	
-	$this->Form->input('username');
+	echo $this->Form->input('username');
+	echo $this->Form->date('date');
+	echo $this->Form->time('time');
+	echo $this->Form->dateAndTime('DateAndTime');
 	
-	$this->Form->end('submit');
+	echo $this->Form->end('submit');
