@@ -20,7 +20,7 @@
 	},
 	
 	"require": {
-		"slywaker/cakephp-plugin-boost_cake": "*",
+		"slywaker/boost_cake": "*",
 		"ext-mcrypt": "*",
 		"composer/installers": "*",
 		"facebook/php-sdk-v4" : "4.0.*"
