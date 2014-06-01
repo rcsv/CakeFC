@@ -1,13 +1,15 @@
 {
-	"name": "rcsv/CakeFC",
-	"description": "FullCalendar Implementation using CakePHP framework",
+	"name": "rcsv/cakefc",
+	"description": "A FullCalendar Implementation using CakePHP framework",
 	"type": "library",
-	"keywords": ["calendar"],
+	"keywords": ["cakephp","calendar"],
 	"license": "MIT",
-	"author": [
+	"authors": [
 		{
-			"name": "Rcsv",
-			"homepage": "https://github.com/rcsv/CakeFC"
+			"name": "Tomohiro Rcsv",
+			"email": "rcsvpg@gmail.com",
+			"homepage": "https://github.com/rcsv/CakeFC",
+			"role": "Developer"
 		}
 	],
 	"config": {
@@ -16,16 +18,21 @@
 	"extra": {
 		"installer-paths": {
 			"app/Vendor/Facebook": ["facebook/php-sdk-v4"],
-			"app/Plugin/BoostCake": ["slywalker/boost_cake"]
+			"app/Plugin/BoostCake": ["slywalker/boost_cake"],
+			"app/Plugin/Picker": ["rcsv/cakephp-pickers-collection"],
+			"app/Plugin/DebugKit": ["cakephp/debug_kit"]
 		}
 	},
-	
+	"minimum-stability": "dev",
+	"prefer-stable": true,	
 	"require": {
+		"rcsv/cakephp-pickers-collection": "<=1.0.1",
 		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*",
 		"composer/installers": "*",
 		"facebook/php-sdk-v4" : "4.0.*"
 	},
+
 	"require-dev": {
 		"cakephp/debug_kit": "2.2.*",
 		"phpunit/phpunit": "3.7.*"
