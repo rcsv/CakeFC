@@ -26,9 +26,21 @@
 	
 	echo $this->Form->create('User');
 	
+	// Normal INPUT 
 	echo $this->Form->input('username');
+	
+	// Datetime :: date
 	echo $this->Form->date('date');
+	
+	// Datetime :: time
 	echo $this->Form->time('time');
+	
+	// Datetime :: datetime
 	echo $this->Form->dateAndTime('DateAndTime');
 	
+	// Country
+	echo $this->Form->country('country');
+	
+	echo $this->Form->timezone('timezone');
+	// Form END
 	echo $this->Form->end('submit');
