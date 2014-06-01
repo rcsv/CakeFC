@@ -30,7 +30,8 @@
 		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*",
 		"composer/installers": "*",
-		"facebook/php-sdk-v4" : "4.0.*"
+		"facebook/php-sdk-v4" : "4.0.*",
+		"rcsv/cakephp-pickers-collection": "*"
 	},
 
 	"require-dev": {
