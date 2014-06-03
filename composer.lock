@@ -3,96 +3,8 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b6922a1203178cd8137420ec77cb82ed",
+    "hash": "fe4f24db7615a36a3323a29da26e032e",
     "packages": [
-        {
-            "name": "cakephp/cakephp",
-            "version": "2.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "780132f892da7d533d067ec3792636a30b48b3be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/780132f892da7d533d067ec3792636a30b48b3be",
-                "reference": "780132f892da7d533d067ec3792636a30b48b3be",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mcrypt": "*",
-                "php": ">=5.2.8"
-            },
-            "require-dev": {
-                "cakephp/debug_kit": "2.2.*",
-                "phpunit/phpunit": "3.7.*"
-            },
-            "bin": [
-                "lib/Cake/Console/cake"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
-                }
-            ],
-            "description": "The CakePHP framework",
-            "homepage": "http://cakephp.org",
-            "keywords": [
-                "framework"
-            ],
-            "time": "2014-05-13 02:17:12"
-        },
-        {
-            "name": "cakephp/localized",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cakephp/localized.git",
-                "reference": "3aecce1d17b7a085deb221e528af29836717684d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/localized/zipball/3aecce1d17b7a085deb221e528af29836717684d",
-                "reference": "3aecce1d17b7a085deb221e528af29836717684d",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "php": ">=5.2.8"
-            },
-            "type": "cakephp-plugin",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                },
-                "installer-name": "Localized"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "CakePHP Community",
-                    "homepage": "https://github.com/cakephp/localized/graphs/contributors"
-                }
-            ],
-            "description": "CakePHP Localized Plugin",
-            "homepage": "https://github.com/cakephp/localized",
-            "keywords": [
-                "cakephp",
-                "i18n",
-                "l10n",
-                "localized"
-            ],
-            "time": "2013-12-06 18:04:23"
-        },
         {
             "name": "composer/installers",
             "version": "v1.0.13",
@@ -179,22 +91,23 @@
         },
         {
             "name": "facebook/php-sdk-v4",
-            "version": "4.0.4",
+            "version": "4.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/facebook-php-sdk-v4.git",
-                "reference": "5754d4c740af29d269030a739b06e5834ff30c2f"
+                "reference": "b576c1e1e7df81b03480b73402176ef64973584d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/5754d4c740af29d269030a739b06e5834ff30c2f",
-                "reference": "5754d4c740af29d269030a739b06e5834ff30c2f",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk-v4/zipball/b576c1e1e7df81b03480b73402176ef64973584d",
+                "reference": "b576c1e1e7df81b03480b73402176ef64973584d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
+                "mockery/mockery": "dev-master",
                 "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
@@ -219,28 +132,32 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2014-05-15 22:43:17"
+            "time": "2014-05-31 19:20:28"
         },
         {
-            "name": "josegonzalez/cakephp-upload",
-            "version": "1.0.0",
+            "name": "rcsv/cakephp-pickers-collection",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/josegonzalez/cakephp-upload.git",
-                "reference": "fa5d74beb785aba78f1472c7af40c35dedeb24e9"
+                "url": "https://github.com/rcsv/cakephp-pickers-collection.git",
+                "reference": "03c5244de241a8bddc69047d428e357cf61b7026"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/cakephp-upload/zipball/fa5d74beb785aba78f1472c7af40c35dedeb24e9",
-                "reference": "fa5d74beb785aba78f1472c7af40c35dedeb24e9",
+                "url": "https://api.github.com/repos/rcsv/cakephp-pickers-collection/zipball/03c5244de241a8bddc69047d428e357cf61b7026",
+                "reference": "03c5244de241a8bddc69047d428e357cf61b7026",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "*"
+                "php": ">=5.3.0",
+                "slywalker/boost_cake": ">=1.0.5"
+            },
+            "suggest": {
+                "twitter/bootstrap": "Bootstrap for Twitter"
             },
             "type": "cakephp-plugin",
             "extra": {
-                "installer-name": "Upload"
+                "installer-name": "Picker"
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -248,142 +165,19 @@
             ],
             "authors": [
                 {
-                    "name": "Marc Würth",
-                    "email": "ravage@bluewin.ch",
-                    "homepage": "https://github.com/ravage84",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Jose Diaz-Gonzalez",
-                    "email": "dotenv@josegonzalez.com",
-                    "homepage": "http://josediazgonzalez.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Joshua Paling",
-                    "homepage": "https://github.com/joshuapaling",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "sdoney",
-                    "homepage": "https://github.com/sdoney",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Giuliano B",
-                    "homepage": "https://github.com/giulianob",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Justin Slamka",
-                    "homepage": "https://github.com/slamkajs",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Nathan Tyler",
-                    "homepage": "https://github.com/tylerdigital",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Mirko Chialastri",
-                    "homepage": "https://github.com/hiryu85",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Benjamin Allison",
-                    "homepage": "https://github.com/benjaminallison",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Ariel Patschiki",
-                    "homepage": "https://github.com/arielpts",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "lucfranken",
-                    "homepage": "https://github.com/lucfranken",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "cpierce",
-                    "homepage": "https://github.com/cpierce",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Barry Chapman",
-                    "homepage": "https://github.com/barrychapman",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Thomas Edvalson",
-                    "homepage": "https://github.com/Cruel",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Alejandro Ibarra",
-                    "homepage": "https://github.com/ajibarra",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "simkimsia",
-                    "homepage": "https://github.com/simkimsia",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Callum Macdonald",
-                    "homepage": "https://github.com/chmac",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "David Kullmann",
-                    "homepage": "https://github.com/dkullmann",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Juan Basso",
-                    "homepage": "https://github.com/jrbasso",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Cauan Cabral",
-                    "homepage": "https://github.com/CauanCabral",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Bryan Crowe",
-                    "homepage": "https://github.com/bcrowe",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Simon Brown",
-                    "homepage": "https://github.com/Simes",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "wilsolutions",
-                    "homepage": "https://github.com/wilsolutions",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "Graham Watson",
-                    "homepage": "https://github.com/PhantomWatson",
-                    "role": "Contributor"
-                },
-                {
-                    "name": "ceallred",
-                    "homepage": "https://github.com/ceallred",
-                    "role": "Contributor"
+                    "name": "Tomohiro Awane",
+                    "email": "rcsvpg@gmail.com"
                 }
             ],
-            "description": "CakePHP plugin to handle file uploading sans ridiculous automagic",
-            "homepage": "http://github.com/josegonzalez/upload",
+            "description": "A CakePHP plugin using jQuery color/date/time and timezone pickers.",
+            "homepage": "http://github.com/rcsv/cakephp-pickers-collection/",
             "keywords": [
-                "Behavior",
+                "bootstrap",
                 "cakephp",
-                "files",
-                "upload"
+                "formhelper",
+                "jquery"
             ],
-            "time": "2013-09-20 09:33:52"
+            "time": "2014-06-02 13:34:26"
         },
         {
             "name": "slywalker/boost_cake",
@@ -846,17 +640,17 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.4.4",
+            "version": "v2.5.0",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "65539ecde838f9c0d18b006b2101e3deb4b5c9ff"
+                "reference": "b4b09c68ec2f2727574544ef0173684281a5033c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/65539ecde838f9c0d18b006b2101e3deb4b5c9ff",
-                "reference": "65539ecde838f9c0d18b006b2101e3deb4b5c9ff",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/b4b09c68ec2f2727574544ef0173684281a5033c",
+                "reference": "b4b09c68ec2f2727574544ef0173684281a5033c",
                 "shasum": ""
             },
             "require": {
@@ -865,7 +659,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -891,13 +685,13 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-18 20:37:09"
+            "time": "2014-05-16 14:25:18"
         }
     ],
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [
 
     ],

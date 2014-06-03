@@ -26,7 +26,7 @@
 	"minimum-stability": "dev",
 	"prefer-stable": true,	
 	"require": {
-		"rcsv/cakephp-pickers-collection": "*",
+		"rcsv/cakephp-pickers-collection": ">=0.4.0",
 		"slywalker/boost_cake": "*",
 		"ext-mcrypt": "*",
 		"composer/installers": "*",

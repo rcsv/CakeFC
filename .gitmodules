@@ -1,6 +1,6 @@
 [submodule "app/Plugin/Picker"]
 	path = app/Plugin/Picker
-	url = https://github.com/rcsv/cakephp-pickers-collection.git
+	url = https://github.com/rcsv/cakephp-pickers-collection
 [submodule "app/Plugin/BoostCake"]
 	path = app/Plugin/BoostCake
 	url = https://github.com/slywalker/cakephp-plugin-boost_cake.git
