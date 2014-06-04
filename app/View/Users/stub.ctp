@@ -37,10 +37,15 @@
 	
 	// Datetime :: datetime
 	echo $this->Form->dateAndTime('DateAndTime');
+
+	// typeAhead
+	// ----------------------------------------------------------------------
 	
 	// Country
 	echo $this->Form->country('country');
-	
+
+
 	echo $this->Form->timezone('timezone');
+
 	// Form END
 	echo $this->Form->end('submit');
