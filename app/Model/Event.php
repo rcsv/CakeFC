@@ -72,7 +72,7 @@ class Event extends AppModel {
 		'end' => array(
 			'datetime' => array(
 				'rule' => 'datetime',
-				'required' => false, 'allowEmpty' => true))));
+				'required' => false, 'allowEmpty' => true)));
 
 	/**
 	 * Add form において、Ajax から送られてくるデータをセットして整えます。
